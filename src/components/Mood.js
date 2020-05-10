@@ -1,19 +1,13 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
-import QuotesContainer from '../containers/QuotesContainer'
+import { Link } from 'react-router-dom'
 
-const Mood = (props) => {
-    // console.log(props)
-
-    let mood = props.moods[props.match.params.id - 1]
+const Mood = ({mood}) => {
     console.log(mood)
 
     return (
         <div>
-            <li>
-                {mood ? mood.feeling : null} - {mood ? mood.url : null}
-            </li>
-            <QuotesContainer mood={mood}/>
+           
+            <h3><Link to={`moods/${mood.id}/quotes`}> {mood.feeling}</Link></h3>
 
         </div>
     )
