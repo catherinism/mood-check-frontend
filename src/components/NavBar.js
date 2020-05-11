@@ -11,6 +11,11 @@ const NavBar = () => {
               <Icon name='home' color='blue' />
               <Link to = '/'>Home</Link>
               </Menu.Item>
+
+              <Menu.Item>
+                  <Icon name='add' color='blue' />
+                  <Link to = '/moods/new'>Add Mood</Link>
+              </Menu.Item>
               
               <Menu.Item>
               <Icon name='lightbulb' color='blue' />
