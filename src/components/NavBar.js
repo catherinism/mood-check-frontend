@@ -14,12 +14,7 @@ const NavBar = () => {
 
               <Menu.Item>
               <Icon name='smile' />
-                  <Link to = '/moods'>All Moods</Link>
-              </Menu.Item>
-
-              <Menu.Item>
-              <Icon name='calendar alternate' />
-              <Link to = '/moods'>Happenings</Link>
+                  <Link to = '/moods'>Mood History</Link>
               </Menu.Item>
               
               <Menu.Item>
