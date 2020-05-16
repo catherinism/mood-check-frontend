@@ -1,5 +1,5 @@
-export const addMood = (data) => {
-    console.log("im here")
+export const addMood = (data, history) => {
+    // console.log("im here")
 
     return (dispatch) => {
         fetch('http://localhost:3000/api/v1/moods', {
@@ -11,6 +11,10 @@ export const addMood = (data) => {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(mood => dispatch({type: 'ADD_MOODS', payload: mood}))
+        .then(mood => { dispatch({type: 'ADD_MOODS', payload: mood})
+        history.push(`/moods/${mood.id}`) 
+        })
     }
 }
+
+  
