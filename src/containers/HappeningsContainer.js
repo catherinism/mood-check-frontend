@@ -8,7 +8,7 @@ class HappeningsContainer extends Component {
             
             <div>
                 <Happenings happenings={this.props.mood && this.props.mood.happenings}/>
-                <h3>Whar are the factors that affected your mood?</h3>
+                <h3>What factor/s affected your mood at the moment?</h3>
                 <HappeningForm mood={this.props.mood}/>
                 
             </div>
