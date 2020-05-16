@@ -8,17 +8,22 @@ const NavBar = () => {
         <Menu icon='labeled' vertical tabular='right' fixed='top'>
             
             <Menu.Item>
-              <Icon name='home' color='blue' />
+            <Icon name='home'/>
               <Link to = '/'>Home</Link>
               </Menu.Item>
 
               <Menu.Item>
-                  <Icon name='add' color='blue' />
-                  <Link to = '/moods/new'>Add Mood</Link>
+              <Icon name='smile' />
+                  <Link to = '/moods'>All Moods</Link>
+              </Menu.Item>
+
+              <Menu.Item>
+              <Icon name='calendar alternate' />
+              <Link to = '/moods'>Happenings</Link>
               </Menu.Item>
               
               <Menu.Item>
-              <Icon name='lightbulb' color='blue' />
+              <Icon name='lightbulb' />
               <Link to = '/about'>About</Link>
               </Menu.Item>
               
