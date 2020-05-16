@@ -7,10 +7,10 @@ const Home = () => {
 
     return (
         <div>
-            <Container>
+            <Container text>
 
             <h1>Hello, there!</h1>
-            <Button icon labelPosition='right' as={Link} to='/moods'><Icon name='right arrow' />MOOD CHECK</Button>
+            <Button icon labelPosition='right' as={Link} to='/moods/new'><Icon name='right arrow' />MOOD CHECK</Button>
             
             </Container>
         </div>
