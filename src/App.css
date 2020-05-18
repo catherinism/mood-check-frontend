@@ -1,3 +1,19 @@
+html, body {
+  margin: 0; 
+  height: 100%; 
+  overflow: hidden;
+  background-image: url("./public/another_bg.jpg");
+  background-size: cover; 
+  width: 100%;
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+
 .App {
   text-align: center;
 }
@@ -35,4 +51,67 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  /* background-image:url("https://images.unsplash.com/photo-1557683311-eac922347aa1"); */
+  
+}
+
+.sub-page {
+  /* width: 100%; */
+  /* height: 100%; */
+  /* min-height: 10vh; */
+  /* display: run-in; */
+  /* align-items: center;  */
+  /* /* justify-content: center; */
+  /* flex-direction: column; */
+  /* background-color: #fff; */
+  /* background-image:url("https://images.unsplash.com/photo-1557683311-eac922347aa1"); */
+  background-size: cover;   
+  padding: 25px 25px 200px 0px;
+ 
+} 
+
+h1 {
+  font-family: 'Lato';
+  font-size: 40px;
+  font-weight: 300;
+}
+
+h2 {
+  font-family: "Lato";
+  font-size: 40x;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Lato";
+  font-size: 16x;
+  font-weight: 400;
+}
+
+.mood-show {
+  text-align: left;
+}
+
+.mood-show-list{
+  text-align: left;
+}
+
+.fas {
+	color: rgb(56, 105, 105);
+}
+.far {
+	color: rgb(78, 146, 146);
+}
+.fa-bus {
+	color: green;
 }
