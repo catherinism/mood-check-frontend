@@ -8,7 +8,7 @@ const Mood = (props) => {
     // let mood = props.moods[props.match.params.id - 1]
     // let mood = props.moods.filter(mood => mood.id == props.match.params.id)[0]
 
-    let mood = props.moods.find(mood => mood.id === props.match.params.id)
+    let mood = props.moods.find(mood => mood.id == props.match.params.id)
     
     console.log(mood)
 

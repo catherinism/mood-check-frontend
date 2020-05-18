@@ -2,6 +2,8 @@ import React from 'react'
 import {Card} from 'semantic-ui-react'
 // import Mood from './Mood'
 
+
+
 const Moods = (props) => {
     console.log(props)
 
