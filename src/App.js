@@ -1,39 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+// import { Route, Switch } from 'react-router-dom';
+// import Home from './components/Home';
+import MoodsContainer from './containers/MoodsContainer'
+// import About from './components/About';
+import NavBar from './components/NavBar'
+// import MoodForm from './components/MoodForm'
+// import Mood from './components/Mood'
 
 class App extends React.Component {
-
-  componentDidMount() {
-    fetch('http://localhost:3000/api/v1/moods/1/quotes', {
-      method: 'GET'
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-  }
+  
   render() {
-
     return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <NavBar />
+      <MoodsContainer />
+
+      {/* <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/moods" component={MoodsContainer} />
+
+        <Route path="/moods/new" component={MoodInput} />
+        <Route path="/moods/:id" component={Mood} />
+        {/* <Route path='/moods/:id' render={(routerProps) => <Mood {...routerProps} moods={this.moods} />} /> */}
+
+        {/* <Route exact path="/about" component={About} />
+   */}
+       
+      
+
+    
     </div>
   );
 }
 
   }
+
   
 
-export default App;
+export default (App);
