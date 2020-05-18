@@ -1,4 +1,5 @@
 import React from 'react'
+import {List} from 'semantic-ui-react'
 
 const Happenings = (props) => {
     
@@ -9,11 +10,17 @@ const Happenings = (props) => {
         <div>
             
             {props.happenings && props.happenings.map(happening =>
-            <i key={happening.id} className={`fas fa-2x ${happening.name}`}></i> 
-            )}
             
-            </div>
-        )
-}
+            <List key={happening.id} celled horizontal>
+                <List.Item>
+                    <i  className={`fas fa-2x ${happening.name}`}></i>
+                    </List.Item>
+                    </List>
+                    
+                    )}
+                    
+                    </div>
+                    )
+                }
 
 export default Happenings
