@@ -1,43 +1,54 @@
-// import React from 'react'
-// import {Link} from 'react-router-dom'
-// // import Mood from './Mood'
-
-
-// const Moods = (props) => {
-//     console.log(props)
-
-//     return (
-//         <div>   
-//             {props.moods.map(mood => 
-//             <li key={mood.id}>
-//           <Link to={`/moods/${mood.id}`}>{mood.date} - {mood.feeling}</Link>
-//         </li> )}
-//         </div>
-//     )
-// }
-
-// export default Moods
-
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Card} from 'semantic-ui-react'
 // import Mood from './Mood'
 
+const Moods = (props) => {
+    console.log(props)
 
-class Moods extends React.Component {
-    // console.log(props)
+    return props.moods.map(mood => {
+      return (
 
-    render() {
+        <div key={mood.id}>
+      
+         <Card.Group stackable centered>
+           <Card href={`/moods/${mood.id}`}>
+           
+           <Card.Content>
+           
+            <i className={`far fa-2x ${mood.feeling}`}></i>
+           <br></br><br></br>
+             <Card.Header>
+           {mood.date}
+               </Card.Header>
 
-    return (
-        <div>   
-            {this.props.moods.map(mood => 
-            <li key={mood.id}>
-          <Link to={`/moods/${this.mood.id}`}>{this.mood.date} - {this.mood.feeling}</Link>
-        </li> )}
+               </Card.Content>
+          </Card>
+          </Card.Group> 
+          
+
         </div>
-    )
+      )
+    })
+
+
+
+//     return (
+//         <div className='card'>   
+
+       
+//             {props.moods.map(mood => 
+//             <div key={mood.id}>
+ 
+            
+              
+          
+//           <Link to={`/moods/${mood.id}`}>{mood.date} - {mood.feeling}</Link>
+//             </div>
+            
+//       )}
+//         </div>
+//     )
 }
 
-}
 export default Moods
 
