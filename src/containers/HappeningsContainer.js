@@ -3,6 +3,8 @@ import HappeningForm from '../components/HappeningForm'
 import Happenings from '../components/Happenings'
 
 class HappeningsContainer extends Component {
+
+    
     render() {
         return (    
             

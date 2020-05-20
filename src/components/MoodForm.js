@@ -10,12 +10,10 @@ class MoodForm extends Component {
         feeling:'',
         date:'',
         note:'',
-        weather:'',
-        url:''
+        weather:''
     }
 
     handleChange = (event) => {
-       
         // debugger;
         this.setState({
             [event.target.name]: event.target.value
@@ -30,16 +28,13 @@ class MoodForm extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.addMood(this.state, this.props.history)
-        // this.setState({
-        //     feeling:'',
-        //     url:''
-        // })
     }
     
 
     render() {
 
         return (
+           
             <div>
 
                 <Form widths='equal' size="big" onSubmit={this.handleSubmit}>

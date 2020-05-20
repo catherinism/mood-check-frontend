@@ -3,14 +3,8 @@ import HappeningsContainer from '../containers/HappeningsContainer'
 import {Card} from 'semantic-ui-react'
 
 const Mood = (props) => {
-    // console.log(props)
-
-    // let mood = props.moods[props.match.params.id - 1]
-    // let mood = props.moods.filter(mood => mood.id == props.match.params.id)[0]
 
     let mood = props.moods.find(mood => mood.id == props.match.params.id)
-    
-    console.log(mood)
 
     return (
         <div>

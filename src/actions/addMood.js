@@ -1,6 +1,4 @@
 export const addMood = (data, history) => {
-    // console.log("im here")
-
     return (dispatch) => {
         fetch('http://localhost:3000/api/v1/moods', {
             headers: {
@@ -16,5 +14,4 @@ export const addMood = (data, history) => {
         })
     }
 }
-
   

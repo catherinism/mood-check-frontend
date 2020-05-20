@@ -3,8 +3,6 @@ import {List} from 'semantic-ui-react'
 
 const Happenings = (props) => {
     
-    console.log(props)
-    
     return (
     
         <div>

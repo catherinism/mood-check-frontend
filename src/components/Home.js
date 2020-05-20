@@ -11,7 +11,7 @@ const Home = () => {
 
             <h1>Hello, there!</h1>
             <Button icon labelPosition='right' as={Link} to='/moods/new'><Icon name='right arrow' />MOOD CHECK</Button>
-            
+            <fetchercise />
             </Container>
         </div>
     )

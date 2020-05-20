@@ -11,12 +11,12 @@ import About from '../components/About'
 class moodsContainer extends Component {
 
     componentDidMount() {
+        console.log("a")
         this.props.fetchMoods()
+        console.log("b")
     }
 
     render() {
-
-        // const {moods} = this.props
 
         return (
             <div>
@@ -24,7 +24,7 @@ class moodsContainer extends Component {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/about" component={About} />
                 <Route path='/moods/new' component={MoodForm} />
-                <Route path='/moods/:id' render={(routerProps) => <Mood {...routerProps} moods={this.props.moods} />} />
+                <Route path='/moods/:id' render={(routerProps) => <Mood {...routerProps} moods={this.props.moods}/>} />
                 <Route exact path='/moods' render={() => <Moods moods={this.props.moods} />} />
                 </Switch>
 
@@ -32,7 +32,6 @@ class moodsContainer extends Component {
                 
                     <br></br>
                     <br></br>
-                    {/* <Moods moods={moods} /> */}
                 </ul>
             </div>
         )

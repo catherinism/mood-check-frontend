@@ -10,12 +10,6 @@ class HappeningForm extends Component {
         name:'',
     }
 
-    handleChange = (event) => {
-        this.setState({
-            [event.target.name]: event.target.value
-        })
-    }
-
     handleItemClick = (e, data) => 
     this.setState({ 
         [data.name]: data.value 
