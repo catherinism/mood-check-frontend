@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import {updatedForm} from '../actions/moodFormData'
-import {createMood} from '../actions/addMood'
+import {createMood, updatedForm} from '../actions/addMood'
 import { List, Form, TextArea, Button, Icon } from 'semantic-ui-react'
 
 class MoodForm extends Component {
