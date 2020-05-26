@@ -1,25 +1,31 @@
-import React from 'react'
+import React, { Component } from 'react'
 import HappeningsContainer from '../containers/HappeningsContainer'
 import {Card} from 'semantic-ui-react'
+import {connect} from 'react-redux'
+import {fetchMood} from '../actions/addMood'
 
-const Mood = (props) => {
+class Mood extends Component {
 
-    let mood = props.moods.find(mood => mood.id == props.match.params.id)
+    componentDidMount() {
+        this.props.fetchMood(this.props.match.params.moodId)
+      }
 
-    return (
-        <div>
-            
+  render() {
+   let mood = this.props.mood[0]
+
+  return (
+    <div>
             <Card.Group centered>
                 <Card>
                     <Card.Content>
-                        <Card.Meta> {mood ? mood.date : null}</Card.Meta>
+                        <Card.Meta> {mood ? mood.date :null}</Card.Meta>
                         <br></br>
-                        <Card.Header><i className={`far fa-2x ${mood ? mood.feeling : null}`}></i></Card.Header>
+                        <Card.Header><i className={`far fa-2x ${mood ? mood.feeling :null}`}></i></Card.Header>
                         </Card.Content>
                         
                         <Card.Content extra textAlign="left">
                             <i className={`fas fa-2x ${mood ? mood.weather : null}`}>
-                                </i> {mood ? mood.note : null}
+                                </i> {mood ? mood.note :null}
                                 </Card.Content>
                                 </Card>
                                 </Card.Group>
@@ -29,7 +35,17 @@ const Mood = (props) => {
                                 <HappeningsContainer mood={mood}/>
                                 
                                 </div>
-                                )
-                            }
+                                
+                            )
+                            
+  }
+}
 
-export default Mood
+const mapStateToProps = state => {
+    console.log(state.moodsReducer)
+    return ({
+        mood: state.moodsReducer
+    })
+}
+
+export default connect(mapStateToProps, {fetchMood})(Mood)
